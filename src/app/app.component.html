@@ -1,8 +1,25 @@
-<div>
-    <app-search-bar />
+<div class="container">
+    <div class="top-bar">
+        <app-search-bar />
+    </div>
+    <div class="top-bar">
+        <button>Add Place</button>
+    </div>
+    <div class="top-bar">
+        <button >Create Menu</button>
+    </div>
+    <div>
+        <div class="top-bar">
+          <button [disabled]="noCurrentOrders">Orders {{orderCount}}</button>
+        </div>
+    </div>
 </div>
-<div class="example-button-row">
-    <button mat-flat-button>Basic</button>
+
+<div style="margin-top: 50px;">
+    <div>
+        <app-promotions />
+    </div>
 </div>
+
 
 <router-outlet />

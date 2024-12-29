@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0 20px; /* Add some padding on the left and right edges */
+    width: 100%; /* Make the container take the full width of the parent */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+// .top-bar {
+//     display: flex;
+//     align-items: center;
+// }
+
+.top-bar button {
+    float: center;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
