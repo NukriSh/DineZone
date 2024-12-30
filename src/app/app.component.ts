@@ -14,7 +14,7 @@ import { ItemCounterComponent } from "./item-counter/item-counter.component";
 })
 export class AppComponent {
   title = 'OrderCraft';
-  orderCount: number = 0;
+  orderCount: number = 2;
 
   noCurrentOrders: boolean =true;
 }

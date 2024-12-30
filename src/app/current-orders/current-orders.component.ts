@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-current-orders',
@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './current-orders.component.scss'
 })
 export class CurrentOrdersComponent {
-  orderCount: number = 0;
+  @Input() currentoOderCount: number = 0;
+
   noCurrentOrders: boolean =true;
 }
