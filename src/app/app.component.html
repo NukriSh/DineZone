@@ -1,23 +1,24 @@
-<div class="container">
-    <div class="top-bar">
+<div class="container top-bar">
+    <div>
         <app-search-bar />
     </div>
-    <div class="top-bar">
+    <div>
         <button>Add Place</button>
     </div>
-    <div class="top-bar">
+    <div>
         <button >Create Menu</button>
     </div>
     <div>
-        <div class="top-bar">
-          <button [disabled]="noCurrentOrders">Orders {{orderCount}}</button>
-        </div>
+        <app-current-orders />
     </div>
 </div>
 
 <div style="margin-top: 50px;">
     <div>
         <app-promotions />
+    </div>
+    <div>
+        <app-item-counter />
     </div>
 </div>
 

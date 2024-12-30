@@ -12,7 +12,7 @@
 //     align-items: center;
 // }
 
-.top-bar button {
+.top-bar ::ng-deep button {
     float: center;
     padding: 6px;
     margin-top: 8px;
