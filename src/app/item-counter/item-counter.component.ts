@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-item-counter',
@@ -9,6 +9,12 @@ import { Component } from '@angular/core';
 })
 export class ItemCounterComponent {
   itemCount: number = 0;
+
+  @Output() countChangeEvent = new EventEmitter<number>();
+
+  postItemCount() {
+    this.countChangeEvent.emit(this.itemCount);
+  }
 
   incrementItemCounter() {
     this.itemCount++;

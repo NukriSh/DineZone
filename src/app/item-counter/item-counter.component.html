@@ -1,5 +1,5 @@
 <div class="item-counter">
-    <button (click)="decrementItemCounter()">-</button>
+    <button (click)="decrementItemCounter()" (click)="postItemCount()">-</button>
     <span>{{ itemCount }}</span>
-    <button (click)="incrementItemCounter()">+</button>
+    <button (click)="incrementItemCounter()" (click)="postItemCount()">+</button>
 </div>

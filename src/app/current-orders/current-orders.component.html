@@ -1,1 +1,2 @@
 <button [disabled]="noCurrentOrders">Orders {{currentoOderCount}}</button>
+<app-item-counter (countChangeEvent)="getItemCount($event)"></app-item-counter>
