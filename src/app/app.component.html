@@ -4,12 +4,12 @@
     </div>
     <div>
         <button>Add Place</button>
-    </div>
-    <div>
         <button >Create Menu</button>
     </div>
     <div>
-        <app-current-orders/>
+        <app-current-orders>
+            <p #projectedContent>content1</p>
+        </app-current-orders>
     </div>
 </div>
 
@@ -21,6 +21,8 @@
         <app-item-counter />
     </div>
 </div>
+
+<app-user-profile />
 
 
 <router-outlet />
