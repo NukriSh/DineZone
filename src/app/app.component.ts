@@ -1,17 +1,16 @@
 import { Component, signal } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { ListRestaurantsComponent } from "./list-restaurants/list-restaurants.component";
+import { AuthService } from './services/auth.service';
 import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet, 
-    ListRestaurantsComponent,
-    NgIf,
+    RouterOutlet,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    NgIf
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -21,21 +20,28 @@ export class AppComponent {
   // orderCount: number = 2;
   // noCurrentOrders: boolean =true;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, public authService: AuthService) {}
 
 
-  // currentUser = signal('RestaurantOwner');
-  // get customerView(): boolean {
-  //   return this.currentUser() === 'Customer';
-  // }
-  // get restaurantOwnerView(): boolean {
-  //   return this.currentUser() === 'RestaurantOwner';
-  // }
-  // setUser(user: string): void {
-  //   this.currentUser.set(user);
-  // }
+  currentUser = signal('RestaurantOwner');
+  get customerView(): boolean {
+    return this.currentUser() === 'Customer';
+  }
+  get restaurantOwnerView(): boolean {
+    return this.currentUser() === 'RestaurantOwner';
+  }
+  setUser(user: string): void {
+    this.currentUser.set(user);
+  }
 
-  //touterThing
+  goToOwner() {
+    this.router.navigate(['/owner']);
+  }
+
+  goToCustomer() {
+    this.router.navigate(['/customer']);
+  }
+
   goToContact() {
     this.router.navigate(['/contact']);
   }
