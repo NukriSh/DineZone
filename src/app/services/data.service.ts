@@ -22,7 +22,7 @@ export class DataService {
     }).pipe(
       map(({ menuItems, restaurants }) => {
         return menuItems.map((menuItem) => {
-          const restaurant = restaurants.find((restaurant) => restaurant.id == menuItem.restaurant_id)
+          const restaurant = restaurants.find((restaurant) => restaurant.id === menuItem.restaurant_id)
           return {
             ...menuItem,
             userName: restaurant ? restaurant.name : 'Unknown'

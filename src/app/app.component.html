@@ -1,30 +1,47 @@
 <div class="container top-bar">
-    <div>
-        <app-search-bar />
-    </div>
-    <div>
+    <ng-container *ngIf="customerView">
+        <div>
+            <app-search-bar />
+        </div>
+    </ng-container>
+    <!-- <div>
         <button>Add Place</button>
         <button >Create Menu</button>
-    </div>
-    <div>
+    </div> -->
+    <!-- <div>
         <app-current-orders>
             <p #projectedContent>content1</p>
         </app-current-orders>
-    </div>
-</div>
-
-<div style="margin-top: 50px;">
+    </div> -->
     <div>
-        <app-promotions />
+        <div>
+            I am:
+        </div>
+        <div>
+            <button (click)="setUser('Customer')">Customer</button>
+        </div>
+        <div>
+            <button (click)="setUser('RestaurantOwner')">RestaurantOwner</button>
+        </div>
+        <div>
+            Current User: {{currentUser()}} 
+        </div>
     </div>
+</div>
+<!-- <ng-container *ngIf="currentUseCustomer">
+    <div style="margin-top: 50px;">
+        <div>
+            <app-promotions />
+        </div>
+    </div>
+</ng-container> -->
+<ng-container *ngIf="customerView">
     <div>
-        <app-item-counter />
+        <app-list-restaurants />
     </div>
-</div>
-
-
-<div>
-    <app-list-restaurants />
-</div>
-
+</ng-container>
+<ng-container *ngIf="restaurantOwnerView">
+    <div>
+    </div>
+</ng-container>
 <router-outlet />

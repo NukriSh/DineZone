@@ -27,15 +27,15 @@ export class ListRestaurantsComponent {
     //this.dataService.createMenuItem(this.newPost);
     // this.fetchData();
 
-    // this.dataService.getAllMenuItems().subscribe({
-    //   next: (menuItems) => {
-    //     console.log(menuItems);
-    //     this.menuItems = menuItems;
-    //   },
-    //   error: (error) => {
-    //     this.errorMEssage = error;
-    //   }
-    // });
+    this.dataService.getAllMenuItems().subscribe({
+      next: (menuItems) => {
+        console.log(menuItems);
+        this.menuItems = menuItems;
+      },
+      error: (error) => {
+        this.errorMEssage = error;
+      }
+    });
 
     this.dataService.getRestaurantList().subscribe({
       next: (restaurants) => {
@@ -47,7 +47,9 @@ export class ListRestaurantsComponent {
       }
     });
 
-    // this.dataService.createNewRestaurant(this.newRestaurant);
-
   }
+  
+  // this.dataService.createNewRestaurant(this.newRestaurant);
+
+
 }
