@@ -1,9 +1,5 @@
 import { Component, signal } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { SearchBarComponent } from "./search-bar/search-bar.component";
-import { PromotionsComponent } from "./promotions/promotions.component";
-import { CurrentOrdersComponent } from "./current-orders/current-orders.component";
-import { ItemCounterComponent } from "./item-counter/item-counter.component";
 import { ListRestaurantsComponent } from "./list-restaurants/list-restaurants.component";
 import { NgIf } from '@angular/common';
 
@@ -12,10 +8,6 @@ import { NgIf } from '@angular/common';
   standalone: true,
   imports: [
     RouterOutlet, 
-    SearchBarComponent, 
-    PromotionsComponent, 
-    CurrentOrdersComponent, 
-    ItemCounterComponent, 
     ListRestaurantsComponent,
     NgIf,
     RouterLink,
