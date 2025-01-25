@@ -1,5 +1,7 @@
 <!-- Instructions for the project launch:
 Start local JSON server for the db.json
+
+I needed to add a proxy.conf.json file specifying the JSON server address and then add that to the angular.json. Otherwise, I got a CORS error.
 -->
 
  <!--

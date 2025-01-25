@@ -1,111 +1,114 @@
 {
-    "Restaurants":[
-        {
-            "id": "1",
-            "identification_number": "1001",
-            "name": "PizzaPlace"
-        },
-        {
-            "id": "2",
-            "identification_number": "1002",
-            "name": "BurgerPlace"
-        },
-        {
-            "id": "3",
-            "identification_number": "1003",
-            "name": "Restaurant3"
-        },
-        {
-            "id": "4",
-            "identification_number": "1004",
-            "name": "Restaurant4"
-        },
-        {
-            "id": "5",
-            "identification_number": "1005",
-            "name": "Restaurant5"
-        },
-        {
-            "id": "6",
-            "identification_number": "1006",
-            "name": "Restaurant6"
-        },
-        {
-            "id": "7",
-            "identification_number": "1007",
-            "name": "Restaurant7"
-        },
-        {
-            "id": "8",
-            "identification_number": "1008",
-            "name": "Restaurant8"
-        },
-        {
-            "id": "9",
-            "identification_number": "1009",
-            "name": "Restaurant9"
-        },
-        {
-            "id": "10",
-            "identification_number": "1010",
-            "name": "Restaurant10"
-        }
-    ],
-
-    "Menus": [
-        {
-            "id": "1",
-            "restaurant_id": "1",
-            "name": "Pizza",
-            "price": "20.00"
-        },
-        {
-            "id": "2",
-            "restaurant_id": "1",
-            "name": "Burger",
-            "price": "15.00"
-        },
-        {
-            "id": "3",
-            "restaurant_id": "1",
-            "name": "Coffee",
-            "price": "7.00"
-        },
-        {
-            "id": "4",
-            "restaurant_id": "1",
-            "name": "Tea",
-            "price": "4.00"
-        },
-        {
-            "id": "5",
-            "restaurant_id": "2",
-            "name": "Burger",
-            "price": "10.00"
-        },
-        {
-            "id": "6",
-            "restaurant_id": "2",
-            "name": "Dish2",
-            "price": "20.00"
-        },
-        {
-            "id": "7",
-            "restaurant_id": "2",
-            "name": "Juice",
-            "price": "5.00"
-        },
-        {
-            "id": "8",
-            "restaurant_id": "3",
-            "name": "Dish1",
-            "price": "10.00"
-        },
-        {
-            "id": "9",
-            "restaurant_id": "3",
-            "name": "Dish2",
-            "price": "20.00"
-        }
-    ]
+  "restaurants": [
+    {
+      "id": "1",
+      "identification_number": "1001",
+      "name": "PizzaPlace"
+    },
+    {
+      "id": "2",
+      "identification_number": "1002",
+      "name": "BurgerPlace"
+    },
+    {
+      "id": "3",
+      "identification_number": "1003",
+      "name": "Restaurant3"
+    },
+    {
+      "id": "4",
+      "identification_number": "1004",
+      "name": "Restaurant4"
+    },
+    {
+      "id": "5",
+      "identification_number": "1005",
+      "name": "Restaurant5"
+    },
+    {
+      "id": "6",
+      "identification_number": "1006",
+      "name": "Restaurant6"
+    },
+    {
+      "id": "7",
+      "identification_number": "1007",
+      "name": "Restaurant7"
+    },
+    {
+      "id": "8",
+      "identification_number": "1008",
+      "name": "Restaurant8"
+    },
+    {
+      "id": "9",
+      "identification_number": "1009",
+      "name": "Restaurant9"
+    },
+    {
+      "id": "10",
+      "identification_number": "1010",
+      "name": "Restaurant10"
+    },
+    {
+      "id": "a67a",
+      "name": "NewRestaurant1"
+    }
+  ],
+  "menuItems": [
+    {
+      "id": "1",
+      "restaurant_id": "1",
+      "name": "Pizza",
+      "price": "20.00"
+    },
+    {
+      "id": "2",
+      "restaurant_id": "1",
+      "name": "Burger",
+      "price": "15.00"
+    },
+    {
+      "id": "3",
+      "restaurant_id": "1",
+      "name": "Coffee",
+      "price": "7.00"
+    },
+    {
+      "id": "4",
+      "restaurant_id": "1",
+      "name": "Tea",
+      "price": "4.00"
+    },
+    {
+      "id": "5",
+      "restaurant_id": "2",
+      "name": "Burger",
+      "price": "10.00"
+    },
+    {
+      "id": "6",
+      "restaurant_id": "2",
+      "name": "Dish2",
+      "price": "20.00"
+    },
+    {
+      "id": "7",
+      "restaurant_id": "2",
+      "name": "Juice",
+      "price": "5.00"
+    },
+    {
+      "id": "8",
+      "restaurant_id": "3",
+      "name": "Dish1",
+      "price": "10.00"
+    },
+    {
+      "id": "9",
+      "restaurant_id": "3",
+      "name": "Dish2",
+      "price": "20.00"
+    }
+  ]
 }

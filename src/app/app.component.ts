@@ -4,11 +4,12 @@ import { SearchBarComponent } from "./search-bar/search-bar.component";
 import { PromotionsComponent } from "./promotions/promotions.component";
 import { CurrentOrdersComponent } from "./current-orders/current-orders.component";
 import { ItemCounterComponent } from "./item-counter/item-counter.component";
+import { ListRestaurantsComponent } from "./list-restaurants/list-restaurants.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SearchBarComponent, PromotionsComponent, CurrentOrdersComponent, ItemCounterComponent],
+  imports: [RouterOutlet, SearchBarComponent, PromotionsComponent, CurrentOrdersComponent, ItemCounterComponent, ListRestaurantsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
