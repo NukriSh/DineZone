@@ -13,47 +13,7 @@
         </div>
     </div>
 </nav>
-<div class="container top-bar">
-    <div>
-        <!--Search bar-->
-        <!-- <ng-container *ngIf="customerView">
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button id="SearchSubmitButton-1" class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </ng-container> -->
-    </div>
-    <!-- <div>
-        <button>Add Place</button>
-        <button >Create Menu</button>
-    </div> -->
-    <!-- <div>
-        <app-current-orders>
-            <p #projectedContent>content1</p>
-        </app-current-orders>
-    </div> -->
-    <div>
-        <div>
-            I am:
-        </div>
-        <div>
-            <button (click)="setUser('Customer')" [disabled]="customerView">Customer</button>
-        </div>
-        <div>
-            <button (click)="setUser('RestaurantOwner')" [disabled]="restaurantOwnerView">RestaurantOwner</button>
-        </div>
-        <div>
-            Current User: {{currentUser()}} 
-        </div>
-    </div>
-</div>
-<!-- <ng-container *ngIf="currentUseCustomer">
-    <div style="margin-top: 50px;">
-        <div>
-            <app-promotions />
-        </div>
-    </div>
-</ng-container> -->
+<!-- 
 <ng-container *ngIf="customerView">
     <div>
         <app-list-restaurants />
@@ -62,8 +22,10 @@
 <ng-container *ngIf="restaurantOwnerView">
     <div>
     </div>
-</ng-container>
+</ng-container> -->
 
-<button (click)="goToContact()">Help</button>
+
 
 <router-outlet />
+<br/>
+<button (click)="goToContact()">Help</button>
