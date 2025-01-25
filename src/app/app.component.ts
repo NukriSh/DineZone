@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { SearchBarComponent } from "./search-bar/search-bar.component";
 import { PromotionsComponent } from "./promotions/promotions.component";
 import { CurrentOrdersComponent } from "./current-orders/current-orders.component";
@@ -17,7 +17,9 @@ import { NgIf } from '@angular/common';
     CurrentOrdersComponent, 
     ItemCounterComponent, 
     ListRestaurantsComponent,
-    NgIf
+    NgIf,
+    RouterLink,
+    RouterLinkActive
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -27,17 +29,23 @@ export class AppComponent {
   // orderCount: number = 2;
   // noCurrentOrders: boolean =true;
 
-  currentUser = signal('RestaurantOwner');
+  constructor(private router: Router) {}
 
+
+  currentUser = signal('RestaurantOwner');
   get customerView(): boolean {
     return this.currentUser() === 'Customer';
   }
-
   get restaurantOwnerView(): boolean {
     return this.currentUser() === 'RestaurantOwner';
   }
-
   setUser(user: string): void {
     this.currentUser.set(user);
   }
+
+  //touterThing
+  goToContact() {
+    this.router.navigate(['/contact']);
+  }
+
 }
