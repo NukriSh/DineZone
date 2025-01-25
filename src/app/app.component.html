@@ -1,9 +1,11 @@
 <div class="container top-bar">
-    <ng-container *ngIf="customerView">
-        <div>
-            <app-search-bar />
-        </div>
-    </ng-container>
+    <div>
+        <ng-container *ngIf="customerView">
+            <div>
+                <app-search-bar />
+            </div>
+        </ng-container>
+    </div>
     <!-- <div>
         <button>Add Place</button>
         <button >Create Menu</button>
@@ -18,10 +20,10 @@
             I am:
         </div>
         <div>
-            <button (click)="setUser('Customer')">Customer</button>
+            <button (click)="setUser('Customer')" [disabled]="customerView">Customer</button>
         </div>
         <div>
-            <button (click)="setUser('RestaurantOwner')">RestaurantOwner</button>
+            <button (click)="setUser('RestaurantOwner')" [disabled]="restaurantOwnerView">RestaurantOwner</button>
         </div>
         <div>
             Current User: {{currentUser()}} 
@@ -44,4 +46,4 @@
     <div>
     </div>
 </ng-container>
-<router-outlet />
+<!-- <router-outlet /> -->
