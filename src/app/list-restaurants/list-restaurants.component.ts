@@ -15,7 +15,6 @@ export class ListRestaurantsComponent {
   menuItems: any[] = [];
   restaurants: Restaurants[] = [];
   errorMessage: string = '';
-  errorMEssage!: string;
   newRestaurant = {
     name: 'NewRestaurant1'
   }
@@ -33,7 +32,7 @@ export class ListRestaurantsComponent {
         this.menuItems = menuItems;
       },
       error: (error) => {
-        this.errorMEssage = error;
+        this.errorMessage = error;
       }
     });
 
@@ -43,7 +42,7 @@ export class ListRestaurantsComponent {
         this.restaurants = restaurants;
       },
       error: (error) => {
-        this.errorMEssage = error;
+        this.errorMessage = error;
       }
     });
 

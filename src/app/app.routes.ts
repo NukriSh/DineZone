@@ -3,7 +3,7 @@ import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { OwnerViewComponent } from './owner-view/owner-view.component';
-import { CutomerViewComponent } from './cutomer-view/cutomer-view.component';
+import { CustomerViewComponent } from './cutsomer-view/customer-view.component';
 import { AuthGuardService } from './services/auth-guard.service';
 
 export const routes: Routes = [
@@ -15,7 +15,7 @@ export const routes: Routes = [
     },
     {  
         path: 'customer', 
-        component: CutomerViewComponent,
+        component: CustomerViewComponent,
         canActivate: [AuthGuardService]
     },
     { 
