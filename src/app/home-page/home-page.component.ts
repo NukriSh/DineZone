@@ -36,5 +36,4 @@ export class HomePageComponent {
     this.router.navigate(['/customer']);
   }
 
-
 }

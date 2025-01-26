@@ -1,12 +1,14 @@
-<div>
+<div style="margin: 0 auto; text-align: center; width: 50%;">
     <div>
         Login as:
     </div>
     <div>
-        <button (click)="setUser('Customer'); authService.logIn(); goToCustomer()" [disabled]="customerView">Customer</button>
+        <!-- <button (click)="setUser('Customer'); authService.logIn(); goToCustomer()" [disabled]="customerView">Customer</button> -->
+        <button (click)="setUser('Customer'); authService.logIn();" [disabled]="customerView">Customer</button>
     </div>
     <div>
-        <button (click)="setUser('RestaurantOwner'); authService.logIn(); goToOwner()" [disabled]="restaurantOwnerView">RestaurantOwner</button>
+        <!-- <button (click)="setUser('RestaurantOwner'); authService.logIn(); goToOwner()" [disabled]="restaurantOwnerView">RestaurantOwner</button> -->
+        <button (click)="setUser('RestaurantOwner'); authService.logIn();" [disabled]="restaurantOwnerView">RestaurantOwner</button>
     </div>
     <div>
         Current User: {{currentUser()}} 
