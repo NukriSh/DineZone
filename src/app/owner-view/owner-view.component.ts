@@ -3,12 +3,13 @@ import { DataService } from '../services/data.service';
 import { Restaurants } from '../interfaces/restaurants';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { AddPlaceformComponent } from '../add-placeform/add-placeform.component';
 
 
 @Component({
   selector: 'app-owner-view',
   standalone: true,
-  imports: [ CommonModule, FormsModule ],
+  imports: [ CommonModule, FormsModule, AddPlaceformComponent ],
   templateUrl: './owner-view.component.html',
   styleUrl: './owner-view.component.scss'
 })

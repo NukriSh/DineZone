@@ -1,0 +1,14 @@
+<form [formGroup]="myForm">
+    <p>Add a new place</p>
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" formControlName="name" />
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="text" id="email" formControlName="email" />
+    </div>
+    <div>
+        <button type="submit" [disabled]="myForm.invalid" (click)="addNewPlace()">Submit</button>
+    </div>
+</form>
