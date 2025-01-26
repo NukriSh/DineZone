@@ -17,13 +17,8 @@
             </li>         
         </ul>
         </div>
-        <!-- <ng-container *ngIf="authService.isLoggedIn()">
-            <div>
-                <button (click)="authService.logOut()" class="btn btn-secondary">Log Out</button>
-            </div>
-        </ng-container> -->
-            <button *ngIf="authService.isLoggedIn()" (click)="authService.logOut()" class="btn btn-secondary">Log Out</button>
-            <button *ngIf="!authService.isLoggedIn()" (click)="goToHome()" class="btn btn-primary">Log In</button>
+        <button *ngIf="authService.isLoggedIn()" (click)="authService.logOut()" class="btn btn-secondary">Log Out</button>
+        <button *ngIf="!authService.isLoggedIn()" (click)="goToHome()" class="btn btn-primary">Log In</button>
     </div>
 </nav>
 <!-- 
