@@ -31,7 +31,8 @@ data.service.ts emits the list of restaurants
 customer-view.component.ts listens (subscribes) to getRestaurantList()
 (didn't use NgRx)
 
-6.- Forms: Utilize Angular Forms for handing user input and implement form validation.
+6. Forms: Utilize Angular Forms for handing user input and implement form validation.
+* add-placeform.component.ts check mandatory field name and validity of emal field.
 
 7.+++ Data Bindings, Directives & Pipes: Implement them to work and display data on the screen.
 * Data Bindings:
