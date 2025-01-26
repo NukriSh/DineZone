@@ -1,14 +1,6 @@
 <app-add-placeform />
 <br/>
 <br/>
-<!-- <div>
-  <label>Select a Restaurant:</label>
-  <select id="restaurantDropdown" [(ngModel)]="selectedRestaurantId">
-    <option *ngFor="let restaurant of restaurants" [value]="restaurant.id">
-      {{ restaurant.name }}
-    </option>
-  </select>
-</div> -->
 <div>
   <label>Select a Restaurant:</label>
   <div *ngFor="let restaurant of restaurants">
@@ -17,6 +9,11 @@
       [ngClass]="{ 'selected': selectedRestaurantId === restaurant.id }"
     >
       {{ restaurant.name }}
+    </button>
+    <button 
+      (click)="deleteRestaurant(restaurant.id)" 
+      class="delete-button">
+      X
     </button>
   </div>
 </div>

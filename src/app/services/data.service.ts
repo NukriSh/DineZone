@@ -47,5 +47,9 @@ export class DataService {
       console.log('restaurant created: ', response)
     });
   }
+
+  deleteRestaurant(id: number): Observable<any> {
+    return this.http.delete(`${this.apiURL}/restaurants/${id}`);
+  }
 }
 

@@ -43,4 +43,17 @@ export class OwnerViewComponent {
       console.log(`Selected Restaurant ID: ${id}`);
       this.router.navigate([`/owner`, id]);
     }
+
+    deleteRestaurant(id: number): void {
+      this.dataService.deleteRestaurant(id).subscribe({
+        next: () => {
+          // After successful deletion, update the restaurant list
+          this.restaurants = this.restaurants.filter((restaurant) => restaurant.id !== id);
+          console.log(`Restaurant with ID ${id} deleted`);
+        },
+        error: (error) => {
+          console.error('Error deleting restaurant: ', error);
+        }
+      });
+    }
 }
