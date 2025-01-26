@@ -1,0 +1,26 @@
+<div>
+    <h4>Restaurants List</h4>
+    <div>
+        <ul>
+          <li *ngFor="let restaurant of restaurants">
+            <button (click)="setSelectedRestaurantId(restaurant.id); getMenuItems()">
+              {{ restaurant.name }}
+              {{ restaurant.id }}
+            </button>
+            <div *ngIf="selectedRestaurantId === restaurant.id">
+                Menu Items:
+                <ng-container *ngFor="let menuItem of menuItems">
+                  <ng-container *ngIf="menuItem.restaurant_id === restaurant.id">
+                    <ul>
+                      <li>
+                          {{ menuItem.name }} -
+                          {{ menuItem.price}}$
+                      </li>
+                    </ul>
+                  </ng-container>
+                </ng-container>
+            </div>
+          </li>
+        </ul>
+    </div>
+</div>
