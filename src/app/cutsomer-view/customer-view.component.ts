@@ -3,11 +3,12 @@ import { DataService } from '../services/data.service';
 import { Restaurants } from '../interfaces/restaurants';
 import { NgFor, NgIf } from '@angular/common';
 import { MenuItems } from '../interfaces/menuItems';
+import { HighlightDirective } from '../directives/highlight.directive';
 
 @Component({
   selector: 'app-customer-view',
   standalone: true,
-  imports: [ NgFor, NgIf],
+  imports: [ NgFor, NgIf, HighlightDirective],
   templateUrl: './customer-view.component.html',
   styleUrl: './customer-view.component.scss'
 })
@@ -52,6 +53,7 @@ export class CustomerViewComponent {
       }
     });
   }
+
 
 
 }

@@ -3,7 +3,12 @@
     <div>
         <ul>
           <li *ngFor="let restaurant of restaurants">
-            <button (click)="setSelectedRestaurantId(restaurant.id); getMenuItems()">
+            <button 
+              appHighlight
+              [defaultColor]="'lightgray'" 
+              [highlightColor]="'green'"
+              (click)="setSelectedRestaurantId(restaurant.id); getMenuItems()"
+            >
               {{ restaurant.name }}
               {{ restaurant.id }}
             </button>
