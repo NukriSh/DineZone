@@ -1,4 +1,4 @@
-<app-add-placeform />
+<app-add-placeform (restaurantAdded)="reloadRestaurantList()"></app-add-placeform>
 <br/>
 <br/>
 <div>
@@ -12,7 +12,8 @@
     </button>
     <button 
       (click)="deleteRestaurant(restaurant.id)" 
-      class="delete-button">
+      class="delete-button"  
+    >
       X
     </button>
   </div>

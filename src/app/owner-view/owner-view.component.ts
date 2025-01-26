@@ -25,6 +25,10 @@ export class OwnerViewComponent {
   
     ngOnInit() {
   
+      this.reloadRestaurantList();
+    }
+
+    reloadRestaurantList() {
       this.dataService.getRestaurantList().subscribe({
         next: (restaurants) => {
           console.log(restaurants);
@@ -34,9 +38,8 @@ export class OwnerViewComponent {
           this.errorMessage = error;
         }
       });
-
-
     }
+    
 
     selectRestaurant(id: number): void {
       this.selectedRestaurantId = id;
@@ -47,7 +50,6 @@ export class OwnerViewComponent {
     deleteRestaurant(id: number): void {
       this.dataService.deleteRestaurant(id).subscribe({
         next: () => {
-          // After successful deletion, update the restaurant list
           this.restaurants = this.restaurants.filter((restaurant) => restaurant.id !== id);
           console.log(`Restaurant with ID ${id} deleted`);
         },

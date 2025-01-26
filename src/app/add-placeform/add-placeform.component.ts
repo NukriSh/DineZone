@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { DataService } from '../services/data.service';
 import { Restaurants } from '../interfaces/restaurants';
@@ -12,10 +12,12 @@ import { Restaurants } from '../interfaces/restaurants';
 })
 export class AddPlaceformComponent {
   myForm: FormGroup;
-  newRestaurant = {
-    name: "",
-    gmail: ""
-  };
+  @Output() restaurantAdded = new EventEmitter<void>();
+
+  // newRestaurant = {
+  //   name: "",
+  //   gmail: ""
+  // };
 
   constructor(private fb: FormBuilder, private dataService: DataService) {
     this.myForm = this.fb.group({
@@ -24,25 +26,18 @@ export class AddPlaceformComponent {
     });
   }
 
-  // addNewPlace(): void {
-  //   if (this.myForm.valid) {}
-  //   this.dataService.createNewRestaurant(this.addNewPlace)
-  //   console.log('adding:', this.addNewPlace)
-  // }
-
   addNewPlace(): void {
     if (this.myForm.valid) {
-      // Prepare the new restaurant object from form values
       console.log('form is valid')
       const newRestaurant = {
         name: this.myForm.value.name,
         email: this.myForm.value.email
       };
 
-      // Pass the newRestaurant object to the DataService
       this.dataService.createNewRestaurant(newRestaurant);
 
       console.log('Adding new restaurant:', newRestaurant);
+      this.restaurantAdded.emit();
     } else {
       console.error('Form is invalid!');
     }
