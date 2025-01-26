@@ -5,6 +5,12 @@
     </form>
 </div>
 <div>
-    <h2>Restaurants List</h2>
-    <app-list-restaurants />
+    <h4>Restaurants List</h4>
+    <div>
+        <ul>
+          <li *ngFor="let restaurant of restaurants">
+            {{ restaurant.name }}
+          </li>
+        </ul>
+    </div>
 </div>
