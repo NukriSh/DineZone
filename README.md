@@ -10,8 +10,9 @@ Requirements:
 1.+(+) Components: Utilize multiple Angular components for different sections of the application.
 * displayed <app-list-restaurants /> in the app.component.html
 
-2.-+- Routing: Implement Angular routing with child routes, route guards and parameterized routes.
-*- child routes
+2.++- Routing: Implement Angular routing with child routes, route guards and parameterized routes.
+*+ child routes
+contact.component.html has childs Georgia and Bulgaria defined in app.routes.ts
 *+ route guards
 auth-guard.service.ts redirects to home, when not logged in and trying to navigate to /customers or /owner
 *-parameterized routes

@@ -5,6 +5,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { OwnerViewComponent } from './owner-view/owner-view.component';
 import { CustomerViewComponent } from './cutsomer-view/customer-view.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import { GeorgiaComponent } from './contact/georgia/georgia.component';
+import { BulgariaComponent } from './contact/bulgaria/bulgaria.component';
 
 export const routes: Routes = [
     { path: 'home', component: HomePageComponent },
@@ -12,6 +14,10 @@ export const routes: Routes = [
         path: 'contact', 
         component: ContactComponent,
         //canActivate: [AuthGuardService]
+        children: [
+            { path: 'georgia', component: GeorgiaComponent },
+            { path: 'bulgaria', component: BulgariaComponent }
+        ]
     },
     {  
         path: 'customer', 
