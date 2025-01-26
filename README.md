@@ -10,7 +10,7 @@ npm install bootstrap
 Requirements:
 
 1.+(+) Components: Utilize multiple Angular components for different sections of the application.
-* displayed <app-list-restaurants /> in the app.component.html
+* owner-view.component.html uses add-placeform.component.ts component
 
 2.+++ Routing: Implement Angular routing with child routes, route guards and parameterized routes.
 *+ child routes
