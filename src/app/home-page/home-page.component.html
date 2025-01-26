@@ -4,13 +4,14 @@
     </div>
     <div>
         <!-- <button (click)="setUser('Customer'); authService.logIn(); goToCustomer()" [disabled]="customerView">Customer</button> -->
-        <button (click)="setUser('Customer'); authService.logIn();" [disabled]="customerView">Customer</button>
+        <!-- <button (click)="setUser('Customer'); authService.logIn();" [disabled]="customerView">Customer</button> -->
+        <button id="btn-isCutomer-1" (click)="authService.setCurrentUser(customer);" [disabled]="authService.isCustomerView()">{{customer}}</button>
     </div>
     <div>
         <!-- <button (click)="setUser('RestaurantOwner'); authService.logIn(); goToOwner()" [disabled]="restaurantOwnerView">RestaurantOwner</button> -->
-        <button (click)="setUser('RestaurantOwner'); authService.logIn();" [disabled]="restaurantOwnerView">RestaurantOwner</button>
+        <button id="btn-restaurantOwner-1" (click)="authService.setCurrentUser(restaurantOwner);" [disabled]="authService.isRestaurantOwnerView()">{{restaurantOwner}}</button>
     </div>
     <div>
-        Current User: {{currentUser()}} 
+        <button id="btn-admin-1" (click)="authService.setCurrentUser(admin);" [disabled]="authService.isAdminView()">{{admin}}</button>
     </div>
 </div>

@@ -14,26 +14,30 @@ export class HomePageComponent {
 
   constructor(private router: Router, public authService: AuthService) {}
 
+  customer: string = 'Customer';
+  restaurantOwner: string = 'RestaurantOwner';
+  admin: string = 'Admin';
+
   currentUser = signal('');
+  setUser(user: string): void {
+    this.currentUser.set(user);
+  }
   get customerView(): boolean {
     return this.currentUser() === 'Customer';
   }
   get restaurantOwnerView(): boolean {
-    return this.currentUser() === 'RestaurantOwner';
+    return (this.currentUser() === 'RestaurantOwner');
   }
-  get currentUserNotSet(): boolean {
-    return this.currentUser() === '';
-  }
-  setUser(user: string): void {
-    this.currentUser.set(user);
+  get adminView(): boolean {
+    return this.currentUser() === 'Admin';
   }
 
-  goToOwner() {
-    this.router.navigate(['/owner']);
-  }
+  // goToOwner() {
+  //   this.router.navigate(['/owner']);
+  // }
 
-  goToCustomer() {
-    this.router.navigate(['/customer']);
-  }
+  // goToCustomer() {
+  //   this.router.navigate(['/customer']);
+  // }
 
 }

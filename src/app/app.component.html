@@ -17,6 +17,9 @@
             </li>         
         </ul>
         </div>
+        <div>
+            Current user: {{authService.getCurrentUser()}}
+        </div>
         <button *ngIf="authService.isLoggedIn()" (click)="authService.logOut()" class="btn btn-secondary">Log Out</button>
         <button *ngIf="!authService.isLoggedIn()" (click)="goToHome()" class="btn btn-primary">Log In</button>
     </div>
