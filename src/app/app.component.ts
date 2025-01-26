@@ -2,6 +2,7 @@ import { Component, signal } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { AuthService } from './services/auth.service';
 import { NgIf } from '@angular/common';
+import { ListRestaurantsComponent } from "./list-restaurants/list-restaurants.component";
 
 @Component({
   selector: 'app-root',
@@ -10,8 +11,9 @@ import { NgIf } from '@angular/common';
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
-    NgIf
-  ],
+    NgIf,
+    ListRestaurantsComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -42,5 +44,10 @@ export class AppComponent {
   goToContact() {
     this.router.navigate(['/contact']);
   }
+
+  goToHome() {
+    this.router.navigate(['/home']);
+  }
+
 
 }

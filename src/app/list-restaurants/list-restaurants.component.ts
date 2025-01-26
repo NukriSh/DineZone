@@ -26,16 +26,6 @@ export class ListRestaurantsComponent {
     //this.dataService.createMenuItem(this.newPost);
     // this.fetchData();
 
-    this.dataService.getAllMenuItems().subscribe({
-      next: (menuItems) => {
-        console.log(menuItems);
-        this.menuItems = menuItems;
-      },
-      error: (error) => {
-        this.errorMessage = error;
-      }
-    });
-
     this.dataService.getRestaurantList().subscribe({
       next: (restaurants) => {
         console.log(restaurants);
@@ -48,7 +38,5 @@ export class ListRestaurantsComponent {
 
   }
   
-  // this.dataService.createNewRestaurant(this.newRestaurant);
-
 
 }
