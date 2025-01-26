@@ -11,14 +11,18 @@ export const routes: Routes = [
     { 
         path: 'contact', 
         component: ContactComponent,
-        canActivate: [AuthGuardService]
+        //canActivate: [AuthGuardService]
     },
     {  
         path: 'customer', 
-        component: CutomerViewComponent
-        // canActivate: [AuthGuardService]
+        component: CutomerViewComponent,
+        canActivate: [AuthGuardService]
     },
-    { path: 'owner', component: OwnerViewComponent },
+    { 
+        path: 'owner', 
+        component: OwnerViewComponent,
+        canActivate: [AuthGuardService] 
+    },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: '**', component: AppComponent } //this must be always last to not mess up the path matching
 ];
