@@ -1,1 +1,11 @@
 <p>owner-view works!</p>
+
+<div>
+  <label>Select a Restaurant:</label>
+  <select id="restaurantDropdown" [(ngModel)]="selectedRestaurantId">
+    <option *ngFor="let restaurant of restaurants" [value]="restaurant.id">
+      {{ restaurant.name }}
+    </option>
+  </select>
+</div>
+
