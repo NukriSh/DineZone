@@ -10,24 +10,29 @@ Requirements:
 1.+(+) Components: Utilize multiple Angular components for different sections of the application.
 * displayed <app-list-restaurants /> in the app.component.html
 
-2.-(-) Routing: Implement Angular routing with child routes, route guards and parameterized routes.
+2.-+- Routing: Implement Angular routing with child routes, route guards and parameterized routes.
+*- child routes
+*+ route guards
+auth-guard.service.ts redirects to home, when not logged in and trying to navigate to /customers or /owner
+*-parameterized routes
 
-3.+(+) Services: Use services for handling business logic, particularly data management (CRUD operations).
+3.+ Services: Use services for handling business logic, particularly data management (CRUD operations).
 * data.service.ts functions defined here are used in the other components (customer-view.component.ts, owner-view.component.html)
 
 4.+ Dependency Injection: Apply dependency injection to inject services into components or other services.
 * customer-view.component.ts uses dependency injection for DataService 
 constructor(private dataService: DataService) {}
 
-5.+ State Management: Implement state management using RxJS (observables) or integrate NgRx to handle complex state and ensure scalability.
+5.+/- State Management: Implement state management using RxJS (observables) or integrate NgRx to handle complex state and ensure scalability.
 * Observable
 data.service.ts emits the list of restaurants
 * Subscribe
 customer-view.component.ts listens (subscribes) to getRestaurantList()
+(didn't use NgRx)
 
 6.- Forms: Utilize Angular Forms for handing user input and implement form validation.
 
-7.+ Data Bindings, Directives & Pipes: Implement them to work and display data on the screen.
+7.+++ Data Bindings, Directives & Pipes: Implement them to work and display data on the screen.
 * Data Bindings:
 list-restaurants.component.html uses interpolation data binding to display restaurant names from the mock data.
 * Pipes:
