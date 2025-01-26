@@ -3,16 +3,19 @@
     {
       "id": "1",
       "identification_number": "1001",
-      "name": "PizzaPlace"
+      "name": "PizzaPlace",
+      "email": "PizzaPlace@gmail.com"
     },
     {
       "id": "2",
       "identification_number": "1002",
-      "name": "BurgerPlace"
+      "name": "BurgerPlace",
+      "email": "BurgerPlace@gmail.com"
     },
     {
       "id": "a67a",
-      "name": "NewRestaurant1"
+      "name": "NewRestaurant1",
+      "email": ""
     }
   ],
   "menuItems": [
