@@ -29,6 +29,11 @@ export const routes: Routes = [
         component: OwnerViewComponent,
         canActivate: [AuthGuardService, CanViewAsOwner],
     },
+    { 
+        path: 'owner/:id',
+        component: OwnerViewComponent,
+        canActivate: [AuthGuardService, CanViewAsOwner],
+    },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: '**', component: AppComponent } //this must be always last to not mess up the path matching
 ];
